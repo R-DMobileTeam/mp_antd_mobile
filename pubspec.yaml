@@ -1,0 +1,32 @@
+name: mp_antd_mobile
+description: The MPFlutter Ant Design Mobile
+publish_to: none
+version: 0.0.1
+homepage: /
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter: 
+    version: ^1.0.0
+    hosted:
+      name: flutter
+      url: https://pub.mpflutter.com
+  mpcore: 
+    version: ^1.0.0
+    hosted:
+      name: mpcore
+      url: https://pub.mpflutter.com
+  
+dependency_overrides:
+  flutter: 
+    version: ^1.0.0
+    hosted:
+      name: flutter
+      url: https://pub.mpflutter.com
+  mpcore: 
+    version: ^1.0.0
+    hosted:
+      name: mpcore
+      url: https://pub.mpflutter.com

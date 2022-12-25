@@ -1,0 +1,22 @@
+name: mpflutter_template
+description: A new MPFlutter project.
+publish_to: "none"
+version: 1.0.0+1
+playbox:
+  name: 模板工程
+  description: 
+  icon: school
+  background: blue
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  flutter: "1.0.0"
+  flutter_web_plugins: "1.0.0"
+  mpcore: "1.0.0"
+  mp_build_tools: "1.0.0"
+  mp_antd_mobile: 
+    path: ../
+dependency_overrides:
+  flutter: "1.0.0"
+  mpcore: "1.0.0"
+  flutter_web_plugins: "1.0.0"
