@@ -115,6 +115,7 @@ class AntButton extends StatelessWidget {
     if (!this.loading) return null;
     final textStyle = makeDefaultTextStyle(context, SizedBox()).style;
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
         SizedBox(
@@ -240,15 +241,17 @@ class AntButton extends StatelessWidget {
               : Colors.white;
         })(),
         fontSize: (() {
+          final themeFontSize = AntTheme.of(context)?.textTheme.fontSize;
+          if (themeFontSize == null) return 15.0;
           switch (this.size) {
             case AntButtonSize.large:
-              return AntFontSize.size10;
+              return themeFontSize.size10;
             case AntButtonSize.middle:
-              return AntFontSize.size10;
+              return themeFontSize.size10;
             case AntButtonSize.small:
-              return AntFontSize.size7;
+              return themeFontSize.size7;
             case AntButtonSize.mini:
-              return AntFontSize.main;
+              return themeFontSize.main;
             default:
           }
         })(),

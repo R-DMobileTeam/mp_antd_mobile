@@ -13,6 +13,12 @@ class AntApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return child;
+    return DefaultTextStyle(
+      style: TextStyle(
+        color: this.theme.textTheme.mainTextColor,
+        fontSize: this.theme.textTheme.fontSize.main,
+      ),
+      child: child,
+    );
   }
 }
