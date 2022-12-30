@@ -4,8 +4,10 @@ import 'package:mp_antd_mobile/common/theme.dart';
 import 'package:mpcore/mpcore.dart';
 import 'package:mpflutter_template/samples/auto_center.dart';
 import 'package:mpflutter_template/samples/button.dart';
+import 'package:mpflutter_template/samples/capsule_tabs.dart';
 import 'package:mpflutter_template/samples/divider.dart';
 import 'package:mpflutter_template/samples/home.dart';
+import 'package:mpflutter_template/samples/jumbo_tabs.dart';
 import 'package:mpflutter_template/samples/safe_area.dart';
 
 void main() {
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
           '/auto_center': (context) => AutoCenterPage(),
           '/divider': (context) => DividerPage(),
           '/safe_area': (context) => SafeAreaPage(),
+          '/capsule_tabs': (context) => CapsuleTabsPage(),
+          '/jumbo_tabs': (context) => JumboTabsPage(),
         },
         navigatorObservers: [MPCore.getNavigationObserver()],
       ),

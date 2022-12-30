@@ -15,11 +15,13 @@ class AntTheme {
 
   final Color primaryColor;
   final Color borderColor;
+  final Color boxColor;
   final AntTextTheme textTheme;
 
   const AntTheme({
     required this.primaryColor,
     this.borderColor = const Color(0xffeeeeee),
+    this.boxColor = const Color(0xfff5f5f5),
     this.textTheme = const AntTextTheme(),
   });
 }

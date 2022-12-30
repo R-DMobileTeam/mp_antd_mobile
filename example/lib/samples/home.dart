@@ -26,6 +26,8 @@ class HomePage extends StatelessWidget {
           renderItem(context, 'AutoCenter', '/auto_center'),
           renderItem(context, 'Divider', '/divider'),
           renderItem(context, 'SafeArea', '/safe_area'),
+          renderItem(context, 'CapsuleTabs', '/capsule_tabs'),
+          renderItem(context, 'JumboTabs', '/jumbo_tabs'),
         ],
       ),
     );
