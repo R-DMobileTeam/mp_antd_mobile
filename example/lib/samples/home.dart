@@ -28,6 +28,8 @@ class HomePage extends StatelessWidget {
           renderItem(context, 'SafeArea', '/safe_area'),
           renderItem(context, 'CapsuleTabs', '/capsule_tabs'),
           renderItem(context, 'JumboTabs', '/jumbo_tabs'),
+          renderItem(context, 'RegularTabs', '/regular_tabs'),
+          renderItem(context, 'Avatar', '/avatar'),
         ],
       ),
     );

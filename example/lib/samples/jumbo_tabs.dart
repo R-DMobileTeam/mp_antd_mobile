@@ -34,9 +34,9 @@ class JumboTabsPage extends StatelessWidget {
   }
 
   Widget _renderBasic() {
-    return JumboTabs(
+    return AntJumboTabs(
       tabs: [
-        JumboTabItem(
+        AntJumboTabItem(
           title: '水果',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -49,7 +49,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: '蔬菜',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -62,7 +62,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: '动物',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -80,10 +80,10 @@ class JumboTabsPage extends StatelessWidget {
   }
 
   Widget _renderTabBarScrollable() {
-    return JumboTabs(
+    return AntJumboTabs(
       tabBarScrollable: true,
       tabs: [
-        JumboTabItem(
+        AntJumboTabItem(
           title: 'Expresso',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -96,7 +96,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: 'Coffee Latte',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -109,7 +109,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: 'Cappuccino',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -122,7 +122,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: 'Americano',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -135,7 +135,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: 'Cafe Mocha',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -148,7 +148,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: 'Flat White',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -161,7 +161,7 @@ class JumboTabsPage extends StatelessWidget {
             );
           }),
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: 'Caramel Macchiato',
           description: '描述文案',
           contentBuilder: ((context) {
@@ -179,17 +179,17 @@ class JumboTabsPage extends StatelessWidget {
   }
 
   Widget _renderNoContent() {
-    return JumboTabs(
+    return AntJumboTabs(
       tabs: [
-        JumboTabItem(
+        AntJumboTabItem(
           title: '水果',
           description: '描述文案',
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: '蔬菜',
           description: '描述文案',
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: '动物',
           description: '描述文案',
         ),
@@ -198,17 +198,17 @@ class JumboTabsPage extends StatelessWidget {
   }
 
   Widget _renderDisable() {
-    return JumboTabs(
+    return AntJumboTabs(
       tabs: [
-        JumboTabItem(
+        AntJumboTabItem(
           title: '水果',
           description: '描述文案',
         ),
-        JumboTabItem(
+        AntJumboTabItem(
           title: '蔬菜',
           description: '描述文案',
         ),
-        JumboTabItem(title: '动物', description: '描述文案', disabled: true),
+        AntJumboTabItem(title: '动物', description: '描述文案', disabled: true),
       ],
     );
   }

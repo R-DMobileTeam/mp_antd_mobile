@@ -2,12 +2,12 @@ import 'package:flutter/widgets.dart';
 import 'package:mp_antd_mobile/mp_antd_mobile.dart';
 import 'package:mp_antd_mobile/navigator/common_tab_view.dart';
 
-class AntCapsuleTabs extends StatelessWidget {
+class AntRegularTabs extends StatelessWidget {
   final AntTabController? controller;
-  final List<AntCapsuleTabItem> tabs;
+  final List<AntRegularTabItem> tabs;
   final bool tabBarScrollable;
 
-  const AntCapsuleTabs({
+  const AntRegularTabs({
     Key? key,
     required this.tabs,
     this.controller,
@@ -18,30 +18,16 @@ class AntCapsuleTabs extends StatelessWidget {
   Widget build(BuildContext context) {
     return AntTabView(
       tabLocation: AntTabLocation.top,
-      tabBarHeight: 62,
+      tabBarHeight: 42,
       tabBarDecoration: AntDivider(padding: EdgeInsets.zero),
       tabBarScrollable: tabBarScrollable,
       tabs: this.tabs.map((e) {
         return AntTabItem(
           activeTabWidget: (() {
-            if (tabBarScrollable) {
-              return AntCapsuleTabButton(item: e, actived: true);
-            } else {
-              return Flexible(
-                flex: 1,
-                child: AntCapsuleTabButton(item: e, actived: true),
-              );
-            }
+            return AntRegularTabButton(item: e, actived: true);
           })(),
           inactiveTabWidget: (() {
-            if (tabBarScrollable) {
-              return AntCapsuleTabButton(item: e, actived: false);
-            } else {
-              return Flexible(
-                flex: 1,
-                child: AntCapsuleTabButton(item: e, actived: false),
-              );
-            }
+            return AntRegularTabButton(item: e, actived: false);
           })(),
           builder: e.contentBuilder ??
               (context) {
@@ -57,12 +43,12 @@ class AntCapsuleTabs extends StatelessWidget {
   }
 }
 
-class AntCapsuleTabItem extends StatelessWidget {
+class AntRegularTabItem extends StatelessWidget {
   final String title;
   final bool disabled;
   final WidgetBuilder? contentBuilder;
 
-  const AntCapsuleTabItem(
+  const AntRegularTabItem(
       {Key? key,
       required this.title,
       this.disabled = false,
@@ -75,11 +61,11 @@ class AntCapsuleTabItem extends StatelessWidget {
   }
 }
 
-class AntCapsuleTabButton extends StatelessWidget {
-  final AntCapsuleTabItem item;
+class AntRegularTabButton extends StatelessWidget {
+  final AntRegularTabItem item;
   final bool actived;
 
-  const AntCapsuleTabButton({
+  const AntRegularTabButton({
     Key? key,
     required this.item,
     required this.actived,
@@ -91,20 +77,28 @@ class AntCapsuleTabButton extends StatelessWidget {
     return Opacity(
       opacity: this.item.disabled ? 0.5 : 1.0,
       child: Container(
-        height: 38,
+        height: 42,
         margin: EdgeInsets.only(left: 6, right: 6),
         padding: EdgeInsets.only(left: 18, right: 18),
-        decoration: BoxDecoration(
-          color: this.actived ? theme.primaryColor : theme.boxColor,
-          borderRadius: BorderRadius.circular(999),
-        ),
-        child: Center(
-          child: Text(
-            this.item.title,
-            style: TextStyle(
-              color:
-                  this.actived ? Colors.white : theme.textTheme.mainTextColor,
-              fontSize: theme.textTheme.fontSize.size7,
+        child: Container(
+          height: 42,
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                width: 2,
+                color: this.actived ? theme.primaryColor : Colors.transparent,
+              ),
+            ),
+          ),
+          child: Center(
+            child: Text(
+              this.item.title,
+              style: TextStyle(
+                color: this.actived
+                    ? theme.primaryColor
+                    : theme.textTheme.mainTextColor,
+                fontSize: theme.textTheme.fontSize.size9,
+              ),
             ),
           ),
         ),

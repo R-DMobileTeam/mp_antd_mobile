@@ -6,3 +6,5 @@ export './layout/divider.dart';
 export './layout/safe_area.dart';
 export './navigator/capsule_tabs.dart';
 export './navigator/jumbo_tabs.dart';
+export './navigator/regular_tabs.dart';
+export './info/avatar.dart';

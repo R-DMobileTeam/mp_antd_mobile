@@ -2,12 +2,12 @@ import 'package:flutter/widgets.dart';
 import 'package:mp_antd_mobile/mp_antd_mobile.dart';
 import 'package:mp_antd_mobile/navigator/common_tab_view.dart';
 
-class JumboTabs extends StatelessWidget {
+class AntJumboTabs extends StatelessWidget {
   final AntTabController? controller;
-  final List<JumboTabItem> tabs;
+  final List<AntJumboTabItem> tabs;
   final bool tabBarScrollable;
 
-  const JumboTabs({
+  const AntJumboTabs({
     Key? key,
     required this.tabs,
     this.controller,
@@ -18,16 +18,16 @@ class JumboTabs extends StatelessWidget {
   Widget build(BuildContext context) {
     return AntTabView(
       tabLocation: AntTabLocation.top,
-      tabBarHeight: 62,
+      tabBarHeight: 66,
       tabBarDecoration: AntDivider(padding: EdgeInsets.zero),
       tabBarScrollable: tabBarScrollable,
       tabs: this.tabs.map((e) {
         return AntTabItem(
           activeTabWidget: (() {
-            return JumboTabButton(item: e, actived: true);
+            return AntJumboTabButton(item: e, actived: true);
           })(),
           inactiveTabWidget: (() {
-            return JumboTabButton(item: e, actived: false);
+            return AntJumboTabButton(item: e, actived: false);
           })(),
           builder: e.contentBuilder ??
               (context) {
@@ -43,13 +43,13 @@ class JumboTabs extends StatelessWidget {
   }
 }
 
-class JumboTabItem extends StatelessWidget {
+class AntJumboTabItem extends StatelessWidget {
   final String title;
   final String description;
   final bool disabled;
   final WidgetBuilder? contentBuilder;
 
-  const JumboTabItem(
+  const AntJumboTabItem(
       {Key? key,
       required this.title,
       required this.description,
@@ -63,11 +63,11 @@ class JumboTabItem extends StatelessWidget {
   }
 }
 
-class JumboTabButton extends StatelessWidget {
-  final JumboTabItem item;
+class AntJumboTabButton extends StatelessWidget {
+  final AntJumboTabItem item;
   final bool actived;
 
-  const JumboTabButton({
+  const AntJumboTabButton({
     Key? key,
     required this.item,
     required this.actived,

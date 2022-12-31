@@ -2,8 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:mp_antd_mobile/mp_antd_mobile.dart';
 import 'package:mpcore/mpcore.dart';
 
-class CapsuleTabsPage extends StatelessWidget {
-  const CapsuleTabsPage({Key? key}) : super(key: key);
+class RegularTabsPage extends StatelessWidget {
+  const RegularTabsPage({Key? key}) : super(key: key);
 
   Widget renderTitle(String title) {
     return Container(
@@ -19,7 +19,7 @@ class CapsuleTabsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MPScaffold(
-      name: 'CapsuleTabs',
+      name: 'RegularTabs',
       body: ListView(children: [
         renderTitle('基础用法'),
         _renderBasic(),
@@ -34,9 +34,9 @@ class CapsuleTabsPage extends StatelessWidget {
   }
 
   Widget _renderBasic() {
-    return AntCapsuleTabs(
+    return AntRegularTabs(
       tabs: [
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: '水果',
           contentBuilder: ((context) {
             return Container(
@@ -48,7 +48,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: '蔬菜',
           contentBuilder: ((context) {
             return Container(
@@ -60,7 +60,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: '动物',
           contentBuilder: ((context) {
             return Container(
@@ -77,10 +77,10 @@ class CapsuleTabsPage extends StatelessWidget {
   }
 
   Widget _renderTabBarScrollable() {
-    return AntCapsuleTabs(
+    return AntRegularTabs(
       tabBarScrollable: true,
       tabs: [
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: 'Expresso',
           contentBuilder: ((context) {
             return Container(
@@ -92,7 +92,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: 'Coffee Latte',
           contentBuilder: ((context) {
             return Container(
@@ -104,7 +104,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: 'Cappuccino',
           contentBuilder: ((context) {
             return Container(
@@ -116,7 +116,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: 'Americano',
           contentBuilder: ((context) {
             return Container(
@@ -128,7 +128,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: 'Cafe Mocha',
           contentBuilder: ((context) {
             return Container(
@@ -140,7 +140,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: 'Flat White',
           contentBuilder: ((context) {
             return Container(
@@ -152,7 +152,7 @@ class CapsuleTabsPage extends StatelessWidget {
             );
           }),
         ),
-        AntCapsuleTabItem(
+        AntRegularTabItem(
           title: 'Caramel Macchiato',
           contentBuilder: ((context) {
             return Container(
@@ -169,21 +169,21 @@ class CapsuleTabsPage extends StatelessWidget {
   }
 
   Widget _renderNoContent() {
-    return AntCapsuleTabs(
+    return AntRegularTabs(
       tabs: [
-        AntCapsuleTabItem(title: '水果'),
-        AntCapsuleTabItem(title: '蔬菜'),
-        AntCapsuleTabItem(title: '动物'),
+        AntRegularTabItem(title: '水果'),
+        AntRegularTabItem(title: '蔬菜'),
+        AntRegularTabItem(title: '动物'),
       ],
     );
   }
 
   Widget _renderDisable() {
-    return AntCapsuleTabs(
+    return AntRegularTabs(
       tabs: [
-        AntCapsuleTabItem(title: '水果'),
-        AntCapsuleTabItem(title: '蔬菜'),
-        AntCapsuleTabItem(title: '动物', disabled: true),
+        AntRegularTabItem(title: '水果'),
+        AntRegularTabItem(title: '蔬菜'),
+        AntRegularTabItem(title: '动物', disabled: true),
       ],
     );
   }
