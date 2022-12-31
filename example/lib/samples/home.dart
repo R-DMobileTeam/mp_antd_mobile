@@ -32,6 +32,8 @@ class HomePage extends StatelessWidget {
           renderItem(context, 'Avatar', '/avatar'),
           renderItem(context, 'Card', '/card'),
           renderItem(context, 'List', '/list'),
+          renderItem(context, 'PageIndicator', '/page_indicator'),
+          renderItem(context, 'Steps', '/steps'),
         ],
       ),
     );

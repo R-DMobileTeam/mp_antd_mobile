@@ -10,3 +10,5 @@ export './navigator/regular_tabs.dart';
 export './info/avatar.dart';
 export './info/card.dart';
 export './info/list.dart';
+export './info/page_indicator.dart';
+export './info/steps.dart';

@@ -11,8 +11,10 @@ import 'package:mpflutter_template/samples/divider.dart';
 import 'package:mpflutter_template/samples/home.dart';
 import 'package:mpflutter_template/samples/jumbo_tabs.dart';
 import 'package:mpflutter_template/samples/list.dart';
+import 'package:mpflutter_template/samples/page_indicator.dart';
 import 'package:mpflutter_template/samples/regular_tabs.dart';
 import 'package:mpflutter_template/samples/safe_area.dart';
+import 'package:mpflutter_template/samples/steps.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,6 +41,8 @@ class MyApp extends StatelessWidget {
           '/avatar': (context) => AvatarPage(),
           '/card': (context) => CardPage(),
           '/list': (context) => ListPage(),
+          '/page_indicator': (context) => PageIndicatorPage(),
+          '/steps': (context) => StepsPage(),
         },
         navigatorObservers: [MPCore.getNavigationObserver()],
       ),
