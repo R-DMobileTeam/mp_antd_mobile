@@ -6,6 +6,7 @@ import 'package:mpflutter_template/samples/auto_center.dart';
 import 'package:mpflutter_template/samples/avatar.dart';
 import 'package:mpflutter_template/samples/button.dart';
 import 'package:mpflutter_template/samples/capsule_tabs.dart';
+import 'package:mpflutter_template/samples/card.dart';
 import 'package:mpflutter_template/samples/divider.dart';
 import 'package:mpflutter_template/samples/home.dart';
 import 'package:mpflutter_template/samples/jumbo_tabs.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
           '/jumbo_tabs': (context) => JumboTabsPage(),
           '/regular_tabs': (context) => RegularTabsPage(),
           '/avatar': (context) => AvatarPage(),
+          '/card': (context) => CardPage(),
         },
         navigatorObservers: [MPCore.getNavigationObserver()],
       ),

@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 
-class AutoCenter extends StatelessWidget {
+class AntAutoCenter extends StatelessWidget {
   final Widget text;
 
-  const AutoCenter({
+  const AntAutoCenter({
     Key? key,
     required this.text,
   }) : super(key: key);
