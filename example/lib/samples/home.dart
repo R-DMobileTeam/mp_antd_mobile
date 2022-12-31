@@ -31,6 +31,7 @@ class HomePage extends StatelessWidget {
           renderItem(context, 'RegularTabs', '/regular_tabs'),
           renderItem(context, 'Avatar', '/avatar'),
           renderItem(context, 'Card', '/card'),
+          renderItem(context, 'List', '/list'),
         ],
       ),
     );

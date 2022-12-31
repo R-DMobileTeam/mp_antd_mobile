@@ -9,3 +9,4 @@ export './navigator/jumbo_tabs.dart';
 export './navigator/regular_tabs.dart';
 export './info/avatar.dart';
 export './info/card.dart';
+export './info/list.dart';
