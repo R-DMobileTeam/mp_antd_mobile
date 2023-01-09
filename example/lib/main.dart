@@ -15,6 +15,7 @@ import 'package:mpflutter_template/samples/page_indicator.dart';
 import 'package:mpflutter_template/samples/regular_tabs.dart';
 import 'package:mpflutter_template/samples/safe_area.dart';
 import 'package:mpflutter_template/samples/steps.dart';
+import 'package:mpflutter_template/samples/tag.dart';
 
 void main() {
   runApp(MyApp());
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
           '/list': (context) => ListPage(),
           '/page_indicator': (context) => PageIndicatorPage(),
           '/steps': (context) => StepsPage(),
+          '/tag': (context) => TagPage(),
         },
         navigatorObservers: [MPCore.getNavigationObserver()],
       ),

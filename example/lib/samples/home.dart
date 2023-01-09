@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
           renderItem(context, 'List', '/list'),
           renderItem(context, 'PageIndicator', '/page_indicator'),
           renderItem(context, 'Steps', '/steps'),
+          renderItem(context, 'Tag', '/tag'),
         ],
       ),
     );
